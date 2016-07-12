@@ -1,0 +1,10 @@
+version: "2"
+services:
+  ghost:
+    image: bunk/alpine-ghost
+    ports:
+      - 2368:2368
+    volumes:
+      - ./content:/var/lib/ghost/
+    environment:
+      BASE_URI: https://localhost:2368
