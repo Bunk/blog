@@ -1,0 +1,8 @@
+.git
+.gitignore
+README.md
+
+content/apps
+content/data
+content/images
+content/themes/casper
