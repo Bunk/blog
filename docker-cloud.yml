@@ -1,16 +1,14 @@
 lb:
-  image: dockercloud/haproxy
+  image: 'dockercloud/haproxy:latest'
   links:
     - blog
   ports:
-    - "80:80"
+    - '80:80'
   roles:
     - global
 
 blog:
   image: bunk/blog
-  volumes:
-    - content:/var/lib/ghost/
   environment:
     - NODE_ENV=production
     - BASE_URI=https://blog.courtoy.io
@@ -20,6 +18,4 @@ blog:
     - MAIL_AUTH_PASS
   autoredeploy: true
   restart: always
-  target_num_containers: 2
-  tags:
-    - blog
+  target_num_containers: 1
