@@ -1,0 +1,18 @@
+version: "2"
+services:
+  ghost:
+    image: bunk/alpine-ghost
+    ports:
+      - 2368:2368
+    volumes:
+      - content:/var/lib/ghost/
+    environment:
+      NODE_ENV: production
+      BASE_URI: https://blog.courtoy.io
+      MAIL_SERVICE:
+      MAIL_TRANSPORT:
+      MAIL_AUTH_USER:
+      MAIL_AUTH_PASS:
+
+volumes:
+  content:
