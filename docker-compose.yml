@@ -1,10 +1,11 @@
-version: "2"
-services:
-  ghost:
-    image: bunk/alpine-ghost
-    ports:
-      - 2368:2368
-    volumes:
-      - ./content:/var/lib/ghost/
+lb:
+  image: 'dockercloud/haproxy:latest'
+  links:
+    - ghost
+  ports:
+    - '80:80'
+
+ghost:
+    image: bunk/blog
     environment:
-      BASE_URI: https://localhost:2368
+        BASE_URI: https://localhost:2368
