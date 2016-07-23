@@ -1,11 +1,15 @@
-lb:
-  image: 'dockercloud/haproxy:latest'
-  links:
-    - ghost
-  ports:
-    - '80:80'
-
-ghost:
-    image: bunk/blog
+blog:
+    build: .
+    volumes:
+        - "./content:/var/lib/ghost"
     environment:
-        BASE_URI: https://localhost:2368
+        URI_BASE: http://localhost:2387
+
+caddy:
+    image: bunk/blog-caddy
+    links:
+        - blog
+    volumes:
+        - "./Caddyfile:/etc/Caddyfile"
+    ports:
+        - "2387:2387"

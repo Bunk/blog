@@ -59,6 +59,9 @@ config = {
         server: {
             host: process.env.GHOST_HOST || '0.0.0.0',
             port: process.env.GHOST_PORT || '2368'
+        },
+        paths: {
+            contentPath: getContentPath( '/' )
         }
     },
 
