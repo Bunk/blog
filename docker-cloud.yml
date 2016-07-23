@@ -1,21 +1,22 @@
-lb:
-  image: 'dockercloud/haproxy:latest'
+blog:
+  image: 'bunk/blog:latest'
+  environment:
+    URI_BASE: http://jd.courtoy.io
+    VIRTUAL_HOST: jd.courtoy.io, https://jd.courtoy.io, *dockerapp.io
+    MAIL_SERVICE: Mailgun
+    MAIL_TRANSPORT: SMTP
+    MAIL_AUTH_USER
+    MAIL_AUTH_PASS
+  autoredeploy: true
+  restart: always
+
+caddy:
+  image: 'bunk/blog-caddy:latest'
   links:
     - blog
   ports:
     - '80:80'
   roles:
     - global
-
-blog:
-  image: bunk/blog
-  environment:
-    - NODE_ENV=production
-    - BASE_URI=https://blog.courtoy.io
-    - MAIL_SERVICE=Mailgun
-    - MAIL_TRANSPORT=SMTP
-    - MAIL_AUTH_USER
-    - MAIL_AUTH_PASS
   autoredeploy: true
   restart: always
-  target_num_containers: 1

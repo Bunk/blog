@@ -2,6 +2,8 @@
 .gitignore
 README.md
 
+node_modules
+
 content/apps
 content/data
 content/images
