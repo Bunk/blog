@@ -3,8 +3,11 @@
 README.md
 
 node_modules
+bower_components
 
 content/apps
 content/data
 content/images
 content/themes/casper
+
+content/themes/bunk/_src

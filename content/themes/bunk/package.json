@@ -1,28 +1,10 @@
 {
   "name": "bunk",
-  "description": "PureCSS theme for Ghost",
-  "homepage": "https://github.com/bunk/blog",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": {
     "name": "JD Courtoy",
     "url": "https://github.com/bunk"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bunk/blog.git"
-  },
-  "bugs": {
-    "url": "https://github.com/bunk/blog/issues"
-  },
-  "keywords": [
-    "elegant",
-    "ghost",
-    "minimalism",
-    "theme",
-    "bunk",
-    "pure",
-    "css"
-  ],
   "devDependencies": {
     "browser-sync": "latest",
     "coffee-script": "latest",
@@ -30,19 +12,21 @@
     "gulp-add-src": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-changed": "latest",
+    "gulp-clean-css": "^2.0.11",
     "gulp-coffee": "latest",
     "gulp-concat": "latest",
     "gulp-cssmin": "latest",
+    "gulp-filter": "^4.0.0",
     "gulp-header": "latest",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-print": "^2.0.1",
     "gulp-sass": "latest",
     "gulp-shorthand": "latest",
     "gulp-strip-css-comments": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
+    "main-bower-files": "^2.13.1",
     "underscore.string": "latest"
-  },
-  "engines": {
-    "node": "4.x"
   },
   "license": "MIT"
 }
