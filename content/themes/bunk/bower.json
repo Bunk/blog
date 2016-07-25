@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "jquery": "^3.1.0",
-    "jquery.fitvids": "fitvids#^1.1.0"
+    "jquery.fitvids": "fitvids#^1.1.0",
+    "normalize-css": "^4.2.0"
   }
 }

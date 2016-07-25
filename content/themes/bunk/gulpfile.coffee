@@ -26,10 +26,12 @@ dist =
 
 src =
   js         :
+    watch    : ['_src/**/*.js']
     common   : ['_src/js/**/*.js']
 
   styles     :
-    common   : ['_src/{css,scss}/*.{css,scss}']
+    watch    : ['_src/**/*.scss']
+    common   : ['_src/styles/*.scss']
 
   templates  : '**/*.hbs'
 
@@ -89,6 +91,8 @@ gulp.task 'js', ->
 gulp.task 'styles', ->
   gulp.src plugins.mainBowerFiles().concat src.styles.common
   .pipe plugins.filter '**/*.{css,scss}'
+  .pipe plugins.order ['normalize.css','*']
+  .pipe plugins.sass().on('error', plugins.sass.logError)
   .pipe plugins.concat dist.name + '.main.css'
   .pipe plugins.cleanCss()
   .pipe gulp.dest dist.css
@@ -107,6 +111,6 @@ gulp.task 'build', ['styles', 'js']
 gulp.task 'default', ->
   gulp.start ['build', 'server']
   gulp.watch( src.templates ).on("change", reload)
-  gulp.watch src.styles.common, ['styles', reload]
-  gulp.watch src.js.common, ['js', reload]
+  gulp.watch src.styles.watch, ['styles', reload]
+  gulp.watch src.js.watch, ['js', reload]
   # gulp.watch src.js.post, ['js-post', reload]
