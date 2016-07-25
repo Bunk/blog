@@ -43,7 +43,7 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: process.env.URI_BASE || 'http://my-ghost-blog.com',
+        url: process.env.URI_BASE || 'http://localhost:2368',
         mail: {
           from: process.env.MAIL_FROM || '',
           transport: process.env.MAIL_TRANSPORT || '',
@@ -59,9 +59,6 @@ config = {
         server: {
             host: process.env.GHOST_HOST || '0.0.0.0',
             port: process.env.GHOST_PORT || '2368'
-        },
-        paths: {
-            contentPath: getContentPath( '/' )
         }
     },
 
