@@ -2,12 +2,17 @@
 .gitignore
 README.md
 
-**/node_modules
-**/bower_components
+node_modules
+bower_components
 
 src/content/apps
 src/content/data
 src/content/images
 src/content/themes/casper
 
+src/content/themes/uno-zen/node_modules
+src/content/themes/uno-zen/bower_components
+
 src/content/themes/bunk/_src
+src/content/themes/bunk/node_modules
+src/content/themes/bunk/bower_components
