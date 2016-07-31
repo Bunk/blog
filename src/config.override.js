@@ -39,9 +39,6 @@ function getDatabaseOptions() {
 }
 
 config = {
-    // ### Production
-    // When running Ghost in the wild, use the production environment.
-    // Configure your URL and mail settings here
     production: {
         url: process.env.URI_BASE || 'http://localhost:2368',
         mail: {
@@ -64,12 +61,8 @@ config = {
             contentPath: getContentPath( '/' )
         }
     },
-
-    // ### Development **(default)**
     development: {
-        // The url to use when providing links to the site, E.g. in RSS and email.
-        // Change this to your Ghost blog's published URL.
-        url: process.env.URI_BASE || 'http://localhost:2368',
+        url: process.env.URI_BASE || 'http://127.0.0.1:2368',
         mail: {
           from: process.env.MAIL_FROM || '',
           transport: process.env.MAIL_TRANSPORT || '',
@@ -81,20 +74,11 @@ config = {
               }
           }
         },
-
-        // #### Database
-        // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: getDatabaseOptions(),
-
-        // #### Server
-        // Can be host & port (default), or socket
         server: {
             host: process.env.GHOST_HOST || '0.0.0.0',
             port: process.env.GHOST_PORT || '2368'
         },
-
-        // #### Paths
-        // Specify where your content directory lives
         paths: {
             contentPath: getContentPath( '/' )
         }

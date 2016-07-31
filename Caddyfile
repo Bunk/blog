@@ -1,4 +1,4 @@
-localhost:2387 {
+localhost:2368 {
     proxy / blog:2368 {
         proxy_header Host {host}
         proxy_header X-Real-IP {remote}
