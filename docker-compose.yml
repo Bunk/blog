@@ -1,9 +1,9 @@
 blog:
     build: .
     volumes:
-        - "./src/content:/var/lib/ghost"
+        - "./var:/var/lib/ghost"
     environment:
-        URI_BASE: http://localhost:2387
+        URI_BASE: http://localhost:2368
 
 caddy:
     image: bunk/blog-caddy
@@ -12,4 +12,4 @@ caddy:
     volumes:
         - "./Caddyfile:/etc/Caddyfile"
     ports:
-        - "2387:2387"
+        - "2368:2368"
