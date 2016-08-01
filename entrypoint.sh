@@ -8,6 +8,7 @@ set -e
 if [ "$GHOST_REDEPLOY_THEMES" = "true" ]; then
   baseDir="$GHOST_SOURCE/content"
   for dir in "$baseDir"/themes/*/; do
+    echo Redeploying Theme: "${dir#$baseDir/}"
     rm -rf "$GHOST_CONTENT/${dir#$baseDir/}"
   done
 fi
