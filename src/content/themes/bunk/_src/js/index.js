@@ -2,9 +2,11 @@
  * Main JS file for Casper behaviours
  */
 
-/* globals jQuery, document */
+/* globals jQuery, document, Prism */
 (function ($, undefined) {
     "use strict";
+
+    Prism.plugins.autoloader.languages_path = '/assets/prism/';
 
     var $document = $(document);
 
