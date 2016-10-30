@@ -62,7 +62,7 @@ body:not(.post-template) .post-title {
     font-family: "Open Sans", sans-serif;
     font-size: 1.5rem;
     line-height: 2.2rem;
-    color: #F0F0F0;
+    color: #9EABB3;
 }
 
 .author-thumb {
@@ -74,8 +74,8 @@ body:not(.post-template) .post-title {
 }
 
 .post-meta a {
-    color: #F0F0F0;
-    // text-decoration: none;
+    color: #9EABB3;
+    text-decoration: none;
 }
 
 .post-meta a:hover {
@@ -145,6 +145,10 @@ body:not(.post-template) .post-title {
     right: 0;
     bottom: 0;
     padding: 0 10rem 10rem;
+
+    .post-meta, .post-meta a {
+      color: #F0F0F0;
+    }
 }
 
 .post-template .post-title {

@@ -1404,7 +1404,7 @@ body:not(.post-template) .post-title {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 2.2rem;
-  color: #F0F0F0; }
+  color: #9EABB3; }
 
 .author-thumb {
   width: 24px;
@@ -1414,7 +1414,8 @@ body:not(.post-template) .post-title {
   border-radius: 100%; }
 
 .post-meta a {
-  color: #F0F0F0; }
+  color: #9EABB3;
+  text-decoration: none; }
 
 .post-meta a:hover {
   text-decoration: underline; }
@@ -1473,6 +1474,8 @@ body:not(.post-template) .post-title {
   right: 0;
   bottom: 0;
   padding: 0 10rem 10rem; }
+  .post-template .post-header .post-meta, .post-template .post-header .post-meta a {
+    color: #F0F0F0; }
 
 .post-template .post-title {
   color: #FFFFFF;
