@@ -9,6 +9,16 @@
     background: #222 no-repeat center center;
     background-size: cover;
     overflow: hidden;
+
+    &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+    }
 }
 
 .main-header .inner {
@@ -160,12 +170,10 @@
     font-weight: 400;
     font-family: "Merriweather", serif;
     letter-spacing: 0.01rem;
-    color: rgba(255,255,255,0.8);
+    color: white;
     text-shadow: 0px 0px 1px black;
 
     .word-attributes {
-        color: rgba(255,255,255,0.8);
-
         .attr::before,
         .phonetic::before {
             content: '|';
@@ -177,11 +185,11 @@
     }
 
     .word-definition {
-        color: rgba(255,255,255,1);
         margin: 1em 0 0;
     }
 
     .word-usage {
+        color: rgba(255,255,255,0.8);
         font-size: 0.9em;
         font-style: italic;
     }
