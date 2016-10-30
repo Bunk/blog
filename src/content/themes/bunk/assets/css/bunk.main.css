@@ -1061,6 +1061,14 @@ body.nav-opened .nav {
   background: #222 no-repeat center center;
   background-size: cover;
   overflow: hidden; }
+  .main-header::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); }
 
 .main-header .inner {
   width: 80%; }
@@ -1193,21 +1201,19 @@ body.nav-opened .nav {
   font-weight: 400;
   font-family: "Merriweather", serif;
   letter-spacing: 0.01rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: white;
   text-shadow: 0px 0px 1px black; }
-  .page-definition .word-attributes {
-    color: rgba(255, 255, 255, 0.8); }
-    .page-definition .word-attributes .attr::before,
-    .page-definition .word-attributes .phonetic::before {
-      content: '|';
-      display: inline-block;
-      font-size: 0.9em;
-      line-height: 1.3em !important;
-      margin-right: 0.71em !important; }
+  .page-definition .word-attributes .attr::before,
+  .page-definition .word-attributes .phonetic::before {
+    content: '|';
+    display: inline-block;
+    font-size: 0.9em;
+    line-height: 1.3em !important;
+    margin-right: 0.71em !important; }
   .page-definition .word-definition {
-    color: white;
     margin: 1em 0 0; }
   .page-definition .word-usage {
+    color: rgba(255, 255, 255, 0.8);
     font-size: 0.9em;
     font-style: italic; }
 
