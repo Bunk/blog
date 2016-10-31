@@ -13,8 +13,6 @@ services:
       build:
         context: ./proxy
         dockerfile: Dockerfile
-      command:
-        - "-ca https://acme-staging.api.letsencrypt.org/directory"
       links:
         - blog
       ports:
