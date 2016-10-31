@@ -7,4 +7,4 @@ COPY ./entry.sh /
 RUN chmod +x /entry.sh
 
 ENTRYPOINT [ "/entry.sh" ]
-CMD []
+CMD [ "/usr/bin/caddy", "-conf ${CADDY_FILE}", "-log stdout", "-agree" ]
