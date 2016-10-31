@@ -1,15 +1,31 @@
-blog:
-    build: .
-    volumes:
-        - "./src/content:/var/lib/ghost"
-    environment:
-        URI_BASE: http://localhost:2368
+version: "2"
+services:
+  blog:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      volumes:
+        - content:/var/lib/ghost
+      environment:
+          URI_BASE: http://localhost:2368
 
-caddy:
-    image: bunk/blog-caddy
-    links:
+  proxy:
+      build:
+        context: ./proxy
+        dockerfile: Dockerfile
+      command:
+        - "-ca https://acme-staging.api.letsencrypt.org/directory"
+      links:
         - blog
-    volumes:
-        - "./Caddyfile:/etc/Caddyfile"
-    ports:
+      ports:
         - "2368:2368"
+      volumes:
+        - "caddy:/root/.caddy"
+      environment:
+        CADDY_PROXY_DOMAINS: "localhost:2368"
+        CADDY_PROXY_TO: "blog:2368"
+        CADDY_TLS: "off"
+
+volumes:
+  content: {}
+  caddy: {}
