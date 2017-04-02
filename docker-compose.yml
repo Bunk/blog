@@ -5,7 +5,7 @@ services:
         context: .
         dockerfile: Dockerfile
       volumes:
-        - content:/var/lib/ghost
+        - "./var/lib/ghost:/var/lib/ghost"
       environment:
           URI_BASE: http://localhost:2368
 
@@ -22,6 +22,7 @@ services:
       environment:
         CADDY_PROXY_DOMAINS: "localhost:2368"
         CADDY_PROXY_TO: "blog:2368"
+        CADDY_STATS: "on"
         CADDY_TLS: "off"
 
 volumes:

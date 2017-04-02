@@ -7,7 +7,7 @@ ${CADDY_PROXY_DOMAINS:-"localhost"}
 proxy / ${CADDY_PROXY_TO:-"blog:2368"} {
   transparent
 }
-expvar /stats
+${CADDY_STATS:+"expvar /stats"}
 tls ${CADDY_TLS:-off}
 EOF
 
