@@ -1,4 +1,4 @@
-FROM bunk/alpine-ghost:1.5.1
+FROM bunk/alpine-ghost:0.11.10
 MAINTAINER JD Courtoy <jd.courtoy@gmail.com>
 
 COPY ./src $GHOST_SOURCE
