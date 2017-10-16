@@ -1,8 +1,4 @@
-FROM bunk/alpine-ghost:0.11.10
-MAINTAINER JD Courtoy <jd.courtoy@gmail.com>
+FROM ghost:1.13.0-alpine
+LABEL maintainer="JD Courtoy <docker@courtoy.io>"
 
-COPY ./src $GHOST_SOURCE
-COPY ./entrypoint.sh /entry.sh
-
-ENTRYPOINT [ "/sbin/tini", "--", "/entry.sh" ]
-CMD [ "npm", "start" ]
+COPY ./src/content /var/lib/ghost/content
