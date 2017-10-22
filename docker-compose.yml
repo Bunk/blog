@@ -3,9 +3,24 @@ version: "3.1"
 services:
 
   blog:
-      build: ./Dockerfile
-      restart: always
-      ports:
-        - 2368:2368
-      volumes:
-        - "./src/content/themes/bunk:/var/lib/ghost/content/themes/bunk"
+    image: bunk/blog:latest
+    build: ./
+    command: nodemon current/index.js -w content/themes -e hbs
+    restart: always
+    ports:
+      - 2368:2368
+    # environment:
+    #   database__client: mysql
+    #   database__connection__host: mysql
+    #   database__connection__user: root
+    #   database__connection__password: password
+    #   database__connection__database: ghost
+    volumes:
+      # - "./node_modules/:/var/lib/ghost/node_modules"
+      - "./src/content/themes/bunk:/var/lib/ghost/content/themes/bunk"
+
+  # mysql:
+  #   image: mysql:5.7
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: password

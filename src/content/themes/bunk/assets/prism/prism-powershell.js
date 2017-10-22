@@ -1,17 +1,17 @@
 Prism.languages.powershell = {
 	'comment': [
 		{
-			pattern: /(^|[^`])<#[\w\W]*?#>/,
+			pattern: /(^|[^`])<#[\s\S]*?#>/,
 			lookbehind: true
 		},
 		{
-			pattern: /(^|[^`])#.+/,
+			pattern: /(^|[^`])#.*/,
 			lookbehind: true
 		}
 	],
 	'string': [
 		{
-			pattern: /"(`?[\w\W])*?"/,
+			pattern: /"(`?[\s\S])*?"/,
 			greedy: true,
 			inside: {
 				'function': {
@@ -27,7 +27,7 @@ Prism.languages.powershell = {
 		}
 	],
 	// Matches name spaces as well as casts, attribute decorators. Force starting with letter to avoid matching array indices
-	'namespace': /\[[a-z][\w\W]*?\]/i,
+	'namespace': /\[[a-z][\s\S]*?\]/i,
 	'boolean': /\$(true|false)\b/i,
 	'variable': /\$\w+\b/i,
 	// Cmdlets and aliases. Aliases should come last, otherwise "write" gets preferred over "write-host" for example

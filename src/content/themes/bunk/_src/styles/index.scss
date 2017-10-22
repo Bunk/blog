@@ -3,6 +3,7 @@
 // ------------------------------
 
 // @import 'modules/variables.scss';
+@import 'modules/fonts.scss';
 @import 'modules/utils.scss';
 
 // ------------------------------
@@ -31,9 +32,16 @@
 // @import 'components/page-error.scss';
 @import 'components/pagination.scss';
 @import 'components/post.scss';
+@import 'components/post-card.scss';
 @import 'components/readmore.scss';
 @import 'components/author.scss';
 // @import 'components/search.scss';
 // @import 'components/loading.scss';
 @import 'components/subscribe.scss';
 @import 'components/media-queries.scss';
+
+// ------------------------------
+// PAGES
+// ------------------------------
+//
+@import 'pages/home.scss';

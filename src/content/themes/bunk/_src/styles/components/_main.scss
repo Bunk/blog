@@ -33,7 +33,7 @@
 
 .main-nav a {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
+    // font-family: 'Open Sans', sans-serif;
 }
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
@@ -84,26 +84,12 @@
                 transform: translateY(-5px) rotate(-90deg);
     }
 }
+
 /* Stop it bouncing and increase contrast when hovered */
 .scroll-down:hover {
     color: #fff;
     -webkit-animation: none;
     animation: none;
-}
-
-/* Put a semi-opaque radial gradient behind the icon to make it more visible
-   on photos which happen to have a light background. */
-.home-template .main-header:after {
-    display: block;
-    content: " ";
-    width: 150px;
-    height: 130px;
-    border-radius: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    margin-left: -75px;
-    background: radial-gradient(ellipse at center,  rgba(0,0,0,0.15) 0%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%);
 }
 
 /* Hide when there's no cover image or on page2+ */
@@ -114,7 +100,7 @@
     display: none
 }
 
-/* Special styles when overlaid on an image*/
+/* Special styles when overlaid on an image */
 .main-nav.overlay {
     position: absolute;
     top: 0;
@@ -134,7 +120,6 @@
     font-size: 10rem;
     letter-spacing: -2px;
     font-weight: 700;
-    font-family: "Open Sans", sans-serif;
     color: #fff;
     text-shadow: 1px 1px 2px black;
 }
@@ -241,7 +226,6 @@
     position: relative;
     margin: 8rem 0 0 0;
     padding: 1rem 15px;
-    font-family: "Open Sans", sans-serif;
     font-size: 1rem;
     line-height: 1.75em;
     color: #BBC7CC;
