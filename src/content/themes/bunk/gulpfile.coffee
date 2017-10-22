@@ -13,6 +13,9 @@ pkg         = require './package.json'
 browserSync = require('browser-sync').create()
 reload      = browserSync.reload
 
+delay = (ms, func) -> setTimeout func, ms
+delayedReload = -> delay 3000, -> reload()
+
 PORT =
   GHOST: 2368
   BROWSERSYNC: 3000
@@ -52,41 +55,6 @@ banner = [ "/**"
 
 # -- Tasks ---------------------------------------------------------------------
 
-# gulp.task 'js-common', ->
-#   gulp.src src.js.common.main
-#   .pipe changed dist.js
-#   .pipe coffee().on 'error', gutil.log
-#   .pipe addsrc src.js.common.vendor
-#   .pipe concat dist.name + '.common.js'
-#   .pipe uglify()
-#   .pipe header banner, pkg: pkg
-#   .pipe gulp.dest dist.js
-#   return
-
-# gulp.task 'js-post', ->
-#   gulp.src src.js.post
-#   .pipe changed dist.js
-#   .pipe concat dist.name + '.post.js'
-#   .pipe uglify()
-#   .pipe header banner, pkg: pkg
-#   .pipe gulp.dest dist.js
-#   return
-
-# gulp.task 'styles', ->
-#   gulp.src src.css.vendor
-#   .pipe changed dist.css
-#   .pipe addsrc src.sass.main
-#   .pipe sass().on 'error', gutil.log
-#   .pipe concat '' + dist.name + '.css'
-#   .pipe prefix()
-#   .pipe strip
-#     all: true
-#   .pipe shorthand()
-#   .pipe cssmin()
-#   .pipe header banner, pkg: pkg
-#   .pipe gulp.dest dist.css
-#   return
-
 gulp.task 'prism', ->
   gulp.src src.js.prism
   .pipe gulp.dest dist.prism
@@ -114,13 +82,10 @@ gulp.task 'server', ->
     files: ['assets/**/*.*']
   return
 
-# gulp.task 'js', ['js-common']
-# gulp.task 'styles', ['css-vendor']
 gulp.task 'build', ['styles', 'js', 'prism']
 
 gulp.task 'default', ->
   gulp.start ['build', 'server']
-  gulp.watch( src.templates ).on("change", reload)
+  gulp.watch src.templates, delayedReload
   gulp.watch src.styles.watch, ['styles', reload]
   gulp.watch src.js.watch, ['js', reload]
-  # gulp.watch src.js.post, ['js-post', reload]

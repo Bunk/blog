@@ -368,6 +368,7 @@ textarea {
   font: inherit;
   /* 2 */ }
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Raleway);
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
@@ -431,7 +432,7 @@ body.nav-opened .site-wrapper {
 
 /* Apply these base styles to all icons */
 [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "casper-icons", "Open Sans", sans-serif;
+  font-family: "casper-icons", sans-serif;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -489,20 +490,15 @@ html {
   height: 100%;
   max-height: 100%;
   font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
   -webkit-tap-highlight-color: transparent; }
 
 body {
   height: 100%;
   max-height: 100%;
-  font-family: "Merriweather", serif;
-  letter-spacing: 0.01rem;
   font-size: 1.8rem;
   line-height: 1.75em;
-  color: #3A4145;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
-  text-rendering: geometricPrecision; }
+  color: #3A4145; }
 
 ::-moz-selection {
   background: #D6EDFF; }
@@ -512,27 +508,20 @@ body {
 
 h1, h2, h3,
 h4, h5, h6 {
-  -webkit-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -moz-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
-  -o-font-feature-settings: 'dlig' 1, 'liga' 1, 'lnum' 1, 'kern' 1;
   color: #2E2E2E;
   line-height: 1.15em;
   margin: 0 0 0.4em 0;
-  font-family: "Open Sans", sans-serif;
-  text-rendering: geometricPrecision; }
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal; }
 
 h1 {
-  font-size: 5rem;
-  letter-spacing: -2px;
-  text-indent: -3px; }
+  font-size: 5rem; }
 
 h2 {
-  font-size: 3.6rem;
-  letter-spacing: -1px; }
+  font-size: 3.6rem; }
 
 h3 {
-  font-size: 3rem;
-  letter-spacing: -0.6px; }
+  font-size: 3rem; }
 
 h4 {
   font-size: 2.5rem; }
@@ -724,7 +713,6 @@ textarea, select, input {
   padding: 6px 9px;
   margin: 0 0 5px 0;
   outline: 0;
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.6rem;
   font-weight: 100;
   line-height: 1.4em;
@@ -774,7 +762,6 @@ button {
   outline: none;
   text-decoration: none;
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
   font-size: 11px;
   line-height: 13px;
   font-weight: 300;
@@ -956,7 +943,6 @@ body.nav-opened .nav {
   /* Overides `.nav a:link, .nav a:visited` colour */
   text-align: center;
   font-size: 12px;
-  font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   line-height: 35px;
@@ -1079,8 +1065,7 @@ body.nav-opened .nav {
   margin: 0 0 30px 0; }
 
 .main-nav a {
-  text-decoration: none;
-  font-family: 'Open Sans', sans-serif; }
+  text-decoration: none; }
 
 /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
@@ -1130,20 +1115,6 @@ body.nav-opened .nav {
   -webkit-animation: none;
   animation: none; }
 
-/* Put a semi-opaque radial gradient behind the icon to make it more visible
-   on photos which happen to have a light background. */
-.home-template .main-header:after {
-  display: block;
-  content: " ";
-  width: 150px;
-  height: 130px;
-  border-radius: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -75px;
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, transparent 70%, transparent 100%); }
-
 /* Hide when there's no cover image or on page2+ */
 .no-cover .scroll-down,
 .no-cover.main-header:after,
@@ -1151,7 +1122,7 @@ body.nav-opened .nav {
 .archive-template .main-header:after {
   display: none; }
 
-/* Special styles when overlaid on an image*/
+/* Special styles when overlaid on an image */
 .main-nav.overlay {
   position: absolute;
   top: 0;
@@ -1170,7 +1141,6 @@ body.nav-opened .nav {
   font-size: 10rem;
   letter-spacing: -2px;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
   color: #fff;
   text-shadow: 1px 1px 2px black; }
 
@@ -1257,7 +1227,6 @@ body.nav-opened .nav {
   position: relative;
   margin: 8rem 0 0 0;
   padding: 1rem 15px;
-  font-family: "Open Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.75em;
   color: #BBC7CC; }
@@ -1290,7 +1259,6 @@ body.nav-opened .nav {
   width: 80%;
   max-width: 710px;
   margin: 4rem auto;
-  font-family: "Open Sans", sans-serif;
   font-size: 1.3rem;
   color: #9EABB3;
   text-align: center; }
@@ -1359,7 +1327,7 @@ body.nav-opened .nav {
 .post {
   position: relative;
   width: 80%;
-  max-width: 710px;
+  max-width: 960px;
   margin: 4rem auto;
   padding-bottom: 4rem;
   border-bottom: #EBF2F6 1px solid;
@@ -1407,7 +1375,6 @@ body:not(.post-template) .post-title {
 .post-meta {
   display: block;
   margin: 1.75rem 0 0 0;
-  font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
   line-height: 2.2rem;
   color: #9EABB3; }
@@ -1613,6 +1580,89 @@ body:not(.post-template) .post-title {
 .post-footer .share .icon-google-plus:hover {
   color: #dd4b39; }
 
+.post-feed {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 4vw; }
+
+.post-card {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  max-width: 350px;
+  overflow: hidden;
+  margin: 0 20px 40px;
+  padding-bottom: 0px; }
+  .post-card a {
+    text-decoration: none; }
+  .post-card__image {
+    width: auto;
+    height: 200px;
+    background: #fff no-repeat center center;
+    background-size: cover; }
+    .post-card__image__link {
+      position: relative;
+      display: block;
+      overflow: hidden; }
+  .post-card__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .post-card__content__link {
+      position: relative;
+      display: block;
+      color: var(--darkgrey); }
+      .post-card__content__link:hover {
+        text-decoration: none; }
+  .post-card__title {
+    margin-top: 0; }
+  .post-card__header {
+    margin-top: 3rem; }
+  .post-card__excerpt {
+    font-size: 0.9em; }
+  .post-card__tags {
+    display: block;
+    margin-bottom: 4px;
+    color: #738a94;
+    font-size: 1.2rem;
+    line-height: 1.15em;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase; }
+  .post-card__meta {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 3rem; }
+    .post-card__meta__author__name {
+      font-size: 1.3rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      text-transform: uppercase; }
+      .post-card__meta__author__name a {
+        text-decoration: underline; }
+    .post-card__meta__author__image {
+      width: 25px;
+      height: 25px;
+      margin-right: 5px;
+      border-radius: 100%;
+      object-fit: cover; }
+
+.home-template .site-header:after {
+  display: none; }
+
+/* Adjust some margins for smaller screens */
+@media (max-width: 650px) {
+  .post-feed {
+    padding-top: 5vw; }
+  .post-card {
+    margin: 0 20px 10vw;
+    max-width: 100%; } }
+
 /* ==========================================================================
    7. Read More - Next/Prev Post Links
    ========================================================================== */
@@ -1674,7 +1724,6 @@ body:not(.post-template) .post-title {
   padding: 4px 10px 5px;
   text-transform: uppercase;
   font-size: 1.1rem;
-  font-family: "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.8);
   border: rgba(255, 255, 255, 0.5) 1px solid;
   border-radius: 4px;
@@ -1884,7 +1933,6 @@ body:not(.post-template) .post-title {
   border-radius: 0 4px 4px 0; }
 
 .gh-subscribe-rss {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1.2rem;
   line-height: 1.4em; }
 
@@ -1917,7 +1965,7 @@ body:not(.post-template) .post-title {
     font-size: 1.8rem;
     line-height: 1.5em; }
   .post {
-    font-size: 0.95em; }
+    font-size: 1.1em; }
   body:not(.post-template) .post-title {
     font-size: 3.2rem; }
   hr {
@@ -2135,6 +2183,21 @@ body:not(.post-template) .post-title {
     margin-bottom: -37px; }
   .read-next .post {
     width: 100%; } }
+
+.home-template {
+  /* Put a semi-opaque radial gradient behind the icon to make it more visible
+       on photos which happen to have a light background. */ }
+  .home-template .main-header:after {
+    display: block;
+    content: " ";
+    width: 150px;
+    height: 130px;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -75px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, transparent 70%, transparent 100%); }
 
 .command-line-prompt {
   border-right: 1px solid #999;

@@ -33,7 +33,16 @@
 {{!-- The main content area on the homepage --}}
 <main id="content" class="content" role="main">
 
-    {{!-- The tag below includes the post loop - partials/loop.hbs --}}
-    {{> "loop"}}
+    <div class="post-feed">
+        {{#foreach posts}}
+
+            {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
+            {{> "post-card"}}
+
+        {{/foreach}}
+    </div>
+
+    {{!-- Previous/next page links - displayed on every page --}}
+    {{pagination}}
 
 </main>

@@ -5,7 +5,14 @@
     "name": "JD Courtoy",
     "url": "https://github.com/bunk"
   },
+  "config": {
+    "posts_per_page": 6
+  },
+  "scripts": {
+    "build": "bower install && gulp"
+  },
   "devDependencies": {
+    "bower": "^1.8.2",
     "browser-sync": "latest",
     "coffee-script": "latest",
     "gulp": "latest",
