@@ -1,8 +1,3 @@
 var
 node_modules
 bower_components
-src/content/config.js
-src/content/apps
-src/content/data
-src/content/images
-src/content/themes/casper
