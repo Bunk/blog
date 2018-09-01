@@ -1,0 +1,59 @@
+baseURL = "/"
+title = "Bunk Thoughts"
+theme = "hugo-coder"
+languageCode = "en-us"
+defaultContentLanguage = "en-us"
+
+paginate = 20
+canonifyURLs = true
+
+pygmentsStyle = "monokai" # Color-theme or style for syntax highlighting.
+pygmentsCodeFences = true # Enable code fence background highlighting.
+pygmentsCodeFencesGuessSyntax = true # Enable syntax guessing for code fences without specified language.
+
+[params] # theme parameters
+  author = "JD Courtoy" # Author's name.
+  info = "Software Samurai" # Author's job title or info.
+  description = "JD Courtoy's online presence" # Site description.
+  keywords = "jd,courtoy,blog,developer,personal" # Site keywords.
+  avatarUrl = "images/bunk.png" # Contain the path of the optionnal avatar in the static folder.
+
+  footerContent = "Hai ya." # Add footer content
+
+  # Whether you want to hide copyright and credits in the footer.
+  hideCredits = true
+  hideCopyright = false
+
+  # Custom CSS
+  custom_css = []
+
+[params.highlight]
+  style = "github"
+  languages = ["go", "dockerfile", "javascript", "bash"]
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fab fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/bunk/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fab fa-linkedin fa-2x"
+  weight = 4
+  url = "https://www.linkedin.com/in/jdcourtoy/"
+[[params.social]]
+  name = "Twitter"
+  icon = "fab fa-twitter fa-2x"
+  weight = 2
+  url = "https://twitter.com/jd_courtoy/"
+
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/posts/"
+[[menu.main]]
+    name = "Resume"
+    weight = 2
+    url = "/resume/"
