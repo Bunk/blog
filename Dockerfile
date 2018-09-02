@@ -1,6 +1,7 @@
-FROM ghost:1.22.0-alpine
-LABEL maintainer="JD Courtoy <docker@courtoy.io>"
+FROM klakegg/hugo:ext-alpine-onbuild AS hugo
 
-COPY ./src/content /var/lib/ghost/content
+FROM nginx:alpine
+COPY --from=hugo /onbuild /usr/share/nginx/html
 
-RUN npm i -g nodemon
+RUN rm /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx
