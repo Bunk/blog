@@ -22,7 +22,7 @@ FROM nginx
 COPY --from=hugo /onbuild /usr/share/nginx/html
 ```
 
-    baseurl = "https://example.com" languageCode = "en" title = "Hemingway" theme = "hemingway" copyright = "© <a href="https://github.com/tanksuzuki">Asuka Suzuki</a> 2016" disqusShortname = "shortname" googleAnalytics = ""
+    baseUrl = "https://example.com" languageCode = "en" title = "Hemingway" theme = "hemingway" copyright = "© <a href="https://github.com/tanksuzuki">Asuka Suzuki</a> 2016" disqusShortname = "shortname" googleAnalytics = ""
     
     [params]
     
