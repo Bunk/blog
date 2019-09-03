@@ -16,3 +16,5 @@ Unfortunately, this pipeline only has a single output.  **There's no way to outp
 To combat this issue, I've started using a combination of "multi-stage builds" for generating small images, multiple docker files for representing different discrete steps in the build process, and a `Makefile` that defines the required pipeline.  Typically I will have _at least_ two `Dockerfiles` in the pipeline:  one for a "dev" image which includes dependencies, and a second "prod" image which removes those developer dependencies in one stage before copying only the necessary resources in another.
 
 Here's an example of what I mean:
+
+{{< gist Bunk 2294d394e552c3c0024d167a4f2967d9 "Dockerfile-deps.dockerfile" >}}
