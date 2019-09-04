@@ -7,7 +7,7 @@ tags = ["docker"]
 title = "Multi-file Docker builds for fun & profit"
 
 +++
-When working with Docker it's a best practice to strip images that you build down into their smallest possible size.  The smaller a Docker image is, the less bytes need to get sent back and forth over the network (and into the Docker host when working locally), the less disk space is required to store and build the image, the lower the disk seek time needs to be, and the less headaches you'll have when working with 500MB+ "micro-services".
+When working with Docker it's a best practice to strip images that you build down into their smallest possible size.  The smaller a Docker image is, the less bytes need to get sent back and forth over the network (and into the Docker host when working locally), the less disk space is required to store and build the image, the lower the disk seek time needs to be, and the less headaches you'll have when working with 500MB+ "microservices".
 
 Fortunately, Docker supports what they call "multi-stage builds" — which are _awesome!_  They effectively give you a pipeline of Docker images that can pipe their resulting resources downwards into a final resulting image that contains only those resources necessary for running your app.
 
