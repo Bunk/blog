@@ -9,7 +9,7 @@ title = "Multi-file Docker builds for fun & profit"
 +++
 When working with Docker it's a best practice to strip images that you build down into their smallest possible size.  The smaller a Docker image is, the less bytes need to get sent back and forth over the network (and into the Docker host when working locally), the less disk space is required to store and build the image, the lower the disk seek time needs to be, and the less headaches you'll have when working with 500MB+ "micro-services".
 
-Fortunately, Docker supports what they call "multi-stage builds" — which are _awesome!_  They effectively give you a pipeline of Docker images that can pipe their resulting resources down the image pipe into a final resulting image that contains only those resources necessary for running your app.
+Fortunately, Docker supports what they call "multi-stage builds" — which are _awesome!_  They effectively give you a pipeline of Docker images that can pipe their resulting resources downwards into a final resulting image that contains only those resources necessary for running your app.
 
 Unfortunately, this pipeline only has a single output.  **There's no way to output _both_ the "development" image with all of the development dependencies installed, and the "production" image with those dependencies removed**.  Why might you want both, you ask?  Personally, I find it useful to run my development environment within the same container environment that eventually gets deployed into production for maximum integrity.  This provides for a fast feedback cycle during development, but provides a super fat image for production use — _bad developer!_
 
