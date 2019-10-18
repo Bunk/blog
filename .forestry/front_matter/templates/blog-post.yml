@@ -19,5 +19,6 @@ fields:
   label: categories
 pages:
 - content/posts/InVision/introducing-the-flow-framework.md
+- content/posts/InVision/flow-framework-dependency-injection-in-javascript.md
 - content/posts/InVision/multi-file-docker-builds-for-fun-profit.md
 - content/posts/migration-to-real-inversion-of-control.md
