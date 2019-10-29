@@ -12,7 +12,7 @@
     "build": "bower install && gulp"
   },
   "devDependencies": {
-    "bower": "^1.8.2",
+    "bower": "^1.8.8",
     "browser-sync": "latest",
     "coffee-script": "latest",
     "gulp": "latest",
