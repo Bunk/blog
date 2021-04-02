@@ -18,10 +18,10 @@ fields:
   name: categories
   label: categories
 pages:
-- content/posts/InVision/flow-framework-routing-navigation.md
 - content/posts/InVision/flow-framework-automated-testing-from-the-user-s-perspective.md
 - content/posts/InVision/flow-framework-decorators-in-es6.md
-- content/posts/InVision/introducing-the-flow-framework.md
 - content/posts/InVision/flow-framework-dependency-injection-in-javascript.md
+- content/posts/InVision/flow-framework-routing-navigation.md
+- content/posts/InVision/introducing-the-flow-framework.md
 - content/posts/InVision/multi-file-docker-builds-for-fun-profit.md
 - content/posts/migration-to-real-inversion-of-control.md
