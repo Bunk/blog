@@ -1,7 +1,6 @@
 +++
 categories = []
-date = "2019-09-03T05:00:00+00:00"
-draft = true
+date = 2019-09-03T05:00:00Z
 slug = "multi-file-docker-builds"
 tags = ["docker"]
 title = "Multi-file Docker builds for fun & profit"
