@@ -14,6 +14,8 @@ sections:
   label: Posts
   create: all
   match: "**/*"
+  templates:
+  - blog-post
 - type: directory
   path: content/_notes
   label: Notes
@@ -27,10 +29,11 @@ file_template: ":filename:"
 build:
   preview_env:
   - HUGO_ENV=staging
-  - HUGO_VERSION=0.48
+  - HUGO_VERSION=0.72.0
   preview_output_directory: public
-  preview_docker_image: forestryio/build:latest
-  mount_path: "/opt/buildhome/repo"
+  preview_docker_image: forestryio/hugo:latest
+  mount_path: "/srv"
+  working_dir: "/srv"
   instant_preview_command: hugo server -D -E -F --port 8080 --bind 0.0.0.0 --renderToDisk
     -d public
 version: '0.48'
