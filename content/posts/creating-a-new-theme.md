@@ -1,6 +1,7 @@
 +++
 categories = []
 date = 2014-09-28T00:00:00Z
+draft = true
 slug = "creating-a-new-theme"
 tags = []
 title = "Creating a New Theme"
