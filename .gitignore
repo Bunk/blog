@@ -2,6 +2,7 @@ var
 node_modules
 bower_components
 resources
+.DS_Store
 
 # Local Netlify folder
 .netlify

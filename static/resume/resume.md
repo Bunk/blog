@@ -49,6 +49,8 @@ InVision
 
 :   *Lead Full Stack Engineer*
 
+    -   Served as interim manager for 6 months on the Authentication
+        squad.
     -   Led 3 individual teams of \~6 engineers each as domain &
         engineering expert, coding mentor, and force multiplier.
     -   Established & sponsored the first two yearly all-company
